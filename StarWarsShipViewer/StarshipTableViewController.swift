@@ -23,6 +23,8 @@ class StarshipTableViewController: UITableViewController {
     }
 
     func reloadStarships() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
         service.getStarships { (result) in
             switch result {
             case .success(let starships):
@@ -31,6 +33,8 @@ class StarshipTableViewController: UITableViewController {
             case .failure(let error):
                 self.presentAlert(withMessage: error.localizedDescription)
             }
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
     }
     

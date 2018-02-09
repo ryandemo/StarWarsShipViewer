@@ -9,6 +9,10 @@
 import UIKit
 
 class StarshipTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var starshipImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,8 +21,9 @@ class StarshipTableViewCell: UITableViewCell {
 
     // Let the view update given a "view model", or some object that contains more or less formatted data for each field in the view
     func configure(for starship: Starship) {
-        textLabel?.text = starship.name + ": " + starship.model
-        detailTextLabel?.text = starship.costInCredits
+        starshipImageView.image = UIImage(named: starship.name) ?? UIImage(named: "placeholder.png")
+        nameLabel?.text = starship.name + ": " + starship.model
+        detailLabel?.text = starship.costInCredits
     }
 
 }
