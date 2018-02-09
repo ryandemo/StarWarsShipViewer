@@ -23,7 +23,7 @@ class StarshipTableViewCell: UITableViewCell {
     func configure(for starship: Starship) {
         starshipImageView.image = UIImage(named: starship.name) ?? UIImage(named: "placeholder.png")
         nameLabel?.text = starship.name + ": " + starship.model
-        detailLabel?.text = starship.costInCredits
+        detailLabel?.text = "Cost: \(starship.costInCredits)"
     }
 
 }
