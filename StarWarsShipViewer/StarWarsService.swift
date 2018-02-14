@@ -32,7 +32,7 @@ struct StarWarsService {
     // static let shared = StarWarsService()
     // private init() { }
     
-    func getStarships(completion: @escaping (_ result: Result<[Starship]>) -> Void) {
+    func getStarships(completion: @escaping (Result<[Starship]>) -> Void) {
         
         Alamofire.request(api.starships, method: .get)
             .responseData { (response) in
