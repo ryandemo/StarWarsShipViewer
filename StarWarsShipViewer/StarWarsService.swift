@@ -38,7 +38,7 @@ struct StarWarsService {
     // static let shared = StarWarsService()
     // private init() { }
     
-    func getStarships(completion: @escaping (_ result: Result<[Starship]>) -> Void) {
+    func getStarships(completion: @escaping (Result<[Starship]>) -> Void) {
         
         // Create a request. Properties of the request, like request.httpMethod and request.httpBody, allow you to do any type of HTTP request.
         let request = URLRequest(url: api.starships)
