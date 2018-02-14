@@ -23,18 +23,25 @@ class StarshipTableViewController: UITableViewController {
     }
 
     func reloadStarships() {
+        // Set this to show the loading indicator in the top left of the status bar
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         service.getStarships { (result) in
-            switch result {
-            case .success(let starships):
-                self.starships = starships
-                self.tableView.reloadData()
-            case .failure(let error):
-                self.presentAlert(withMessage: error.localizedDescription)
-            }
             
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            // Must call this UI-updating code on the UI thread
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let starships):
+                    self.starships = starships
+                    self.tableView.reloadData()
+                    
+                case .failure(let error):
+                    self.presentAlert(withMessage: error.localizedDescription)
+                }
+                
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }
+
         }
     }
     

@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		283A2C155EE61B3367C47DC4 /* Pods_StarWarsShipViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB04D9EC2E85985DBA45E6A2 /* Pods_StarWarsShipViewer.framework */; };
-		4EE6143B4F616BCB1B84FEDA /* Pods_StarWarsShipViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF2D77010037E1D4EA3C035 /* Pods_StarWarsShipViewerUITests.framework */; };
-		744E7C0FFDACDD858EFFA60A /* Pods_StarWarsShipViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1504116302DA0898F3DF7D77 /* Pods_StarWarsShipViewerTests.framework */; };
 		949587832023F55C00B85678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949587822023F55C00B85678 /* AppDelegate.swift */; };
 		949587882023F55C00B85678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949587862023F55C00B85678 /* Main.storyboard */; };
 		9495878A2023F55C00B85678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949587892023F55C00B85678 /* Assets.xcassets */; };
@@ -41,11 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1504116302DA0898F3DF7D77 /* Pods_StarWarsShipViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsShipViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BF2D77010037E1D4EA3C035 /* Pods_StarWarsShipViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsShipViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F2901FC7F76B19383BC8A1D /* Pods-StarWarsShipViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsShipViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsShipViewerUITests/Pods-StarWarsShipViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5645A7147D21CFA5974F4E5A /* Pods-StarWarsShipViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsShipViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsShipViewerTests/Pods-StarWarsShipViewerTests.release.xcconfig"; sourceTree = "<group>"; };
-		69E56E98B85C8DD022144C3F /* Pods-StarWarsShipViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsShipViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsShipViewer/Pods-StarWarsShipViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		9495877F2023F55C00B85678 /* StarWarsShipViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsShipViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		949587822023F55C00B85678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		949587872023F55C00B85678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,10 +55,6 @@
 		949587B42023F59800B85678 /* StarshipTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipTableViewController.swift; sourceTree = "<group>"; };
 		949587B62023F5A100B85678 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		949587B82024486C00B85678 /* StarshipInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipInfoViewController.swift; sourceTree = "<group>"; };
-		BA7F721457BF35F1F5299AD5 /* Pods-StarWarsShipViewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsShipViewerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsShipViewerUITests/Pods-StarWarsShipViewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DB04D9EC2E85985DBA45E6A2 /* Pods_StarWarsShipViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsShipViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0B17AD0FF770E5868E8A0A4 /* Pods-StarWarsShipViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsShipViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsShipViewerTests/Pods-StarWarsShipViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E51CA2C2B0C53D480F24D667 /* Pods-StarWarsShipViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsShipViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsShipViewer/Pods-StarWarsShipViewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				283A2C155EE61B3367C47DC4 /* Pods_StarWarsShipViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				744E7C0FFDACDD858EFFA60A /* Pods_StarWarsShipViewerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,36 +76,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE6143B4F616BCB1B84FEDA /* Pods_StarWarsShipViewerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09985D6F2556A23E57A2FCDC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DB04D9EC2E85985DBA45E6A2 /* Pods_StarWarsShipViewer.framework */,
-				1504116302DA0898F3DF7D77 /* Pods_StarWarsShipViewerTests.framework */,
-				1BF2D77010037E1D4EA3C035 /* Pods_StarWarsShipViewerUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2C88C53F0B899E61ED4307F5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				69E56E98B85C8DD022144C3F /* Pods-StarWarsShipViewer.debug.xcconfig */,
-				E51CA2C2B0C53D480F24D667 /* Pods-StarWarsShipViewer.release.xcconfig */,
-				E0B17AD0FF770E5868E8A0A4 /* Pods-StarWarsShipViewerTests.debug.xcconfig */,
-				5645A7147D21CFA5974F4E5A /* Pods-StarWarsShipViewerTests.release.xcconfig */,
-				BA7F721457BF35F1F5299AD5 /* Pods-StarWarsShipViewerUITests.debug.xcconfig */,
-				1F2901FC7F76B19383BC8A1D /* Pods-StarWarsShipViewerUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		949587762023F55C00B85678 = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +89,6 @@
 				949587962023F55C00B85678 /* StarWarsShipViewerTests */,
 				949587A12023F55C00B85678 /* StarWarsShipViewerUITests */,
 				949587802023F55C00B85678 /* Products */,
-				2C88C53F0B899E61ED4307F5 /* Pods */,
-				09985D6F2556A23E57A2FCDC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,12 +144,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 949587A72023F55C00B85678 /* Build configuration list for PBXNativeTarget "StarWarsShipViewer" */;
 			buildPhases = (
-				E6822C87885C82E6DD8832BF /* [CP] Check Pods Manifest.lock */,
 				9495877B2023F55C00B85678 /* Sources */,
 				9495877C2023F55C00B85678 /* Frameworks */,
 				9495877D2023F55C00B85678 /* Resources */,
-				98A15A9313FBA44A462E5BC6 /* [CP] Embed Pods Frameworks */,
-				877A09912EB35A0D8C86A238 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,12 +161,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 949587AA2023F55C00B85678 /* Build configuration list for PBXNativeTarget "StarWarsShipViewerTests" */;
 			buildPhases = (
-				1A88C0FDF73A1034479C19D7 /* [CP] Check Pods Manifest.lock */,
 				9495878F2023F55C00B85678 /* Sources */,
 				949587902023F55C00B85678 /* Frameworks */,
 				949587912023F55C00B85678 /* Resources */,
-				CE547081DA0D016325B29B6B /* [CP] Embed Pods Frameworks */,
-				3507C508CF2DA6C674476DBC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,12 +179,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 949587AD2023F55C00B85678 /* Build configuration list for PBXNativeTarget "StarWarsShipViewerUITests" */;
 			buildPhases = (
-				E1626CA4CD4C4A5DD8646192 /* [CP] Check Pods Manifest.lock */,
 				9495879A2023F55C00B85678 /* Sources */,
 				9495879B2023F55C00B85678 /* Frameworks */,
 				9495879C2023F55C00B85678 /* Resources */,
-				8529A2BE5EEE2227D531263E /* [CP] Embed Pods Frameworks */,
-				740F7282A6E5D4110BA62020 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,156 +265,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1A88C0FDF73A1034479C19D7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StarWarsShipViewerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3507C508CF2DA6C674476DBC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsShipViewerTests/Pods-StarWarsShipViewerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		740F7282A6E5D4110BA62020 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsShipViewerUITests/Pods-StarWarsShipViewerUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8529A2BE5EEE2227D531263E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsShipViewerUITests/Pods-StarWarsShipViewerUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		877A09912EB35A0D8C86A238 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsShipViewer/Pods-StarWarsShipViewer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		98A15A9313FBA44A462E5BC6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsShipViewer/Pods-StarWarsShipViewer-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsShipViewer/Pods-StarWarsShipViewer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE547081DA0D016325B29B6B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StarWarsShipViewerTests/Pods-StarWarsShipViewerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E1626CA4CD4C4A5DD8646192 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StarWarsShipViewerUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E6822C87885C82E6DD8832BF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StarWarsShipViewer-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9495877B2023F55C00B85678 /* Sources */ = {
@@ -639,7 +440,6 @@
 		};
 		949587A82023F55C00B85678 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69E56E98B85C8DD022144C3F /* Pods-StarWarsShipViewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -655,7 +455,6 @@
 		};
 		949587A92023F55C00B85678 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E51CA2C2B0C53D480F24D667 /* Pods-StarWarsShipViewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -671,7 +470,6 @@
 		};
 		949587AB2023F55C00B85678 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0B17AD0FF770E5868E8A0A4 /* Pods-StarWarsShipViewerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -689,7 +487,6 @@
 		};
 		949587AC2023F55C00B85678 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5645A7147D21CFA5974F4E5A /* Pods-StarWarsShipViewerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -707,7 +504,6 @@
 		};
 		949587AE2023F55C00B85678 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA7F721457BF35F1F5299AD5 /* Pods-StarWarsShipViewerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -724,7 +520,6 @@
 		};
 		949587AF2023F55C00B85678 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F2901FC7F76B19383BC8A1D /* Pods-StarWarsShipViewerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
