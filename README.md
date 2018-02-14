@@ -8,4 +8,4 @@ Repo maintained by [Ryan Demo](mailto:ryan.demo@me.com). See the [presentation w
 ### Getting Started
 1. Install [Cocoapods](https://cocoapods.org/) with `$ sudo gem install cocoapods` if you don't have it
 2. Run `$ pod install` after `cd`ing to the root of the repo
-3. Open Xcode, then press command + R to build and run
+3. Open `StarWarsShipViewer.xcworkspace` **(it has to be the workspace)** in Xcode, then press command + R to build and run
