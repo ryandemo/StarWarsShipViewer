@@ -10,7 +10,7 @@ import Foundation
 
 /// Simple struct to hold your API endpoints. Having a baseURL init lets you quickly swap between dev and production, localhost vs AWS, etc.
 struct API {
-    static let prodBase = URL(string: "https://swapi.co/api/")!
+    static let prodBase = URL(string: "https://swapi.co/api/")!  // Use ! after this to "force unwrap" the optional because you know for sure that it's a URL string.
     
     let starships: URL
     
@@ -19,6 +19,7 @@ struct API {
     }
 }
 
+// Simple generic enum with associated values that takes advantage of the Swift language
 enum Result<Value> {
     case success(Value)
     case failure(Error)
@@ -43,8 +44,8 @@ struct StarWarsService {
         // Create a request. Properties of the request, like request.httpMethod and request.httpBody, allow you to do any type of HTTP request.
         let request = URLRequest(url: api.starships)
         
-        // Open a URL session with the request, and give code to execute upon response.
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
+        // Create a URL session data task with the request, and give code to execute upon response.
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             // Code that will be executed when you get a response back from your request
             
@@ -53,8 +54,16 @@ struct StarWarsService {
                 
             } else if let data = data {  // If the data exists
                 do {
+                    // If there's any dates in your model, you can customize how the date is decoded like so:
+                    // let formatter = DateFormatter()
+                    // formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+                    // let d = JSONDecoder()
+                    // d.dateDecodingStrategy = .formatted(formatter)
+                    // let starships = try d.decode(Starships.self, from: data)
+                    
                     let starships = try JSONDecoder().decode(Starships.self, from: data)
                     completion(.success(starships.results))
+                    
                 } catch {  // This will catch JSON decoder errors
                     completion(.failure(error))
                 }
@@ -62,7 +71,10 @@ struct StarWarsService {
             } else {  // If we're here, the data doesn't exist and we can return our custom error
                 completion(.failure(StarWarsServiceError.dataNotFound))
             }
-        }.resume()
+        }
+        
+        // Start the request. Can also use task.cancel() after the fact.
+        task.resume()
         
     }
     

@@ -18,36 +18,27 @@ struct Starship: Codable {
     let model: String
     let manufacturer: String
     let costInCredits: String
-    let length: String
-    let crew: String
-    let passengers: String
     
     // Enables Swift's built in JSON encoding/decoding, along with conformance to Codable
     private enum CodingKeys: String, CodingKey {
         case costInCredits = "cost_in_credits"
-        case name, model, manufacturer, length, crew, passengers
+        case name, model, manufacturer
     }
     
-    // Manual init if you need it. You can do a manual decoder with the Codable protocol, but it's more confusing than this.
+    // Manual init if you need it. You can write a manual decoder with the Decodable protocol, but it's a little more confusing.
+    // To get a raw dictionary from JSON, use this in the service when you recieve the response data: JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
     init?(dict: [String: Any]) {
         guard
             let name = dict["name"] as? String,
             let model = dict["model"] as? String,
             let manufacturer = dict["manufacturer"] as? String,
-            let costInCredits = dict["cost_in_credits"] as? String,
-            let length = dict["length"] as? String,
-            let crew = dict["crew"] as? String,
-            let passengers = dict["passengers"] as? String else {
+            let costInCredits = dict["cost_in_credits"] as? String else {
                 return nil
         }
-        
         self.name = name
         self.model = model
         self.manufacturer = manufacturer
         self.costInCredits = costInCredits
-        self.length = length
-        self.crew = crew
-        self.passengers = passengers
     }
     
 }
