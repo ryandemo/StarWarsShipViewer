@@ -19,11 +19,15 @@ struct Starship: Codable {
     let manufacturer: String
     let costInCredits: String
     
-    // Enables Swift's built in JSON encoding/decoding, along with conformance to Codable
-    private enum CodingKeys: String, CodingKey {
-        case costInCredits = "cost_in_credits"
-        case name, model, manufacturer
-    }
+    // Pre-Swift 4.1, you have to manually convert snake_case to lowerCamelCase.
+    // This is now automated using the `keyDecodingStrategy` property in `JSONDecoder`.
+    // See `StarWarsService` for example.
+    //
+    // You can use thus enum if you want more customization in your key names.
+    // private enum CodingKeys: String, CodingKey {
+    //    case costInCredits = "cost_in_credits"
+    //    case name, model, manufacturer
+    // }
     
     // Manual init if you need it. You can write a manual decoder with the Decodable protocol, but it's a little more confusing.
     // To get a raw dictionary from JSON, use this in the service when you recieve the response data: JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]

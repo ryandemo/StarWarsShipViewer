@@ -61,7 +61,10 @@ struct StarWarsService {
                     // d.dateDecodingStrategy = .formatted(formatter)
                     // let starships = try d.decode(Starships.self, from: data)
                     
-                    let starships = try JSONDecoder().decode(Starships.self, from: data)
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    
+                    let starships = try decoder.decode(Starships.self, from: data)
                     completion(.success(starships.results))
                     
                 } catch {  // This will catch JSON decoder errors
