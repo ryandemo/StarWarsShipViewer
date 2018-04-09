@@ -12,9 +12,21 @@ class StarshipTableViewController: UITableViewController {
     
     let service = StarWarsService()
     var starships = [Starship]()
+    
+    // Some pre-defined examples to use without networking.
+    // Comment out the Starship.init(dict:) method to make it compile.
+    // var starships = [
+    //    Starship(name: "Death Star", model: "Battle Station", manufacturer: "Empire", costInCredits: "1000000000000"),
+    //    Starship(name: "Millennium Falcon", model: "Light freighter", manufacturer: "Solo Corp", costInCredits: "100000")
+    // ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // If not using network
+        // tableView.reloadData()
+        
+        // If using network
         reloadStarships()
     }
     
