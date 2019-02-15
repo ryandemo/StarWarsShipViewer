@@ -3,7 +3,7 @@
 ![Version 1.0](https://img.shields.io/badge/version-1.0-blue.svg)
 ![Swift Version 4.2](https://img.shields.io/badge/swift-4.2-orange.svg)
 
-Repo maintained by [Ryan Demo](mailto:ryan.demo@me.com). See the [presentation website](https://rcd.io/ios-workshop) for the corresponding talk and resources.
+Repo maintained by [Ryan Demo](https://rcd.io/). See the [presentation website](https://rcd.io/ios-workshop) for the corresponding talk and resources.
 
 ### Getting Started
 1. Open `StarWarsShipViewer.xcodeproj` in Xcode, then press command + R to build and run
