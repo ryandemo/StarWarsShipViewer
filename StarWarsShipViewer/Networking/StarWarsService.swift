@@ -8,12 +8,6 @@
 
 import Foundation
 
-// Simple generic enum with associated values that takes advantage of the Swift language
-enum Result<Value> {
-    case success(Value)
-    case failure(Error)
-}
-
 /// Defines errors thrown by the StarWarsService. Represent your errors as enum cases, and make them conform to the Error protocol.
 enum StarWarsServiceError: Error {
     case dataNotFound
@@ -21,7 +15,7 @@ enum StarWarsServiceError: Error {
 
 struct StarWarsService {
     
-    func getStarships(completion: @escaping (Result<[Starship]>) -> Void) {
+    func getStarships(completion: @escaping (Result<[Starship], Error>) -> Void) {
         
         let route = URL(string: "https://swapi.co/api/starships")!
         
@@ -31,20 +25,11 @@ struct StarWarsService {
         // Create a URL session data task with the request, and give code to execute upon response.
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            // Code that will be executed when you get a response back from your request
-            
             if let error = error {  // If there was an error, pass it back to the getStarships caller
                 completion(.failure(error))
                 
             } else if let data = data {  // If the data exists
                 do {
-                    // If there's any dates in your model, you can customize how the date is decoded like so:
-                    // let formatter = DateFormatter()
-                    // formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-                    // let d = JSONDecoder()
-                    // d.dateDecodingStrategy = .formatted(formatter)
-                    // let starships = try d.decode(Starships.self, from: data)
-                    
                     let decoder = JSONDecoder()
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     

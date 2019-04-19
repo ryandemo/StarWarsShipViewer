@@ -15,7 +15,6 @@ class StarshipTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         reloadStarships()
     }
     
@@ -25,7 +24,7 @@ class StarshipTableViewController: UITableViewController {
 
     func reloadStarships() {
         service.getStarships { result in
-            
+
             // Must call this UI-updating code on the UI thread
             DispatchQueue.main.async {
                 switch result {
@@ -37,7 +36,6 @@ class StarshipTableViewController: UITableViewController {
                     self.presentAlert(withMessage: error.localizedDescription)
                 }
             }
-
         }
     }
     
