@@ -17,7 +17,6 @@
 		949587B32023F58900B85678 /* StarshipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949587B22023F58900B85678 /* StarshipTableViewCell.swift */; };
 		949587B52023F59800B85678 /* StarshipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949587B42023F59800B85678 /* StarshipTableViewController.swift */; };
 		949587B72023F5A100B85678 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949587B62023F5A100B85678 /* Starship.swift */; };
-		949587B92024486C00B85678 /* StarshipInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949587B82024486C00B85678 /* StarshipInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		949587B22023F58900B85678 /* StarshipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipTableViewCell.swift; sourceTree = "<group>"; };
 		949587B42023F59800B85678 /* StarshipTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipTableViewController.swift; sourceTree = "<group>"; };
 		949587B62023F5A100B85678 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
-		949587B82024486C00B85678 /* StarshipInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,11 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				949587822023F55C00B85678 /* AppDelegate.swift */,
-				949587B62023F5A100B85678 /* Starship.swift */,
-				949587B42023F59800B85678 /* StarshipTableViewController.swift */,
-				949587B22023F58900B85678 /* StarshipTableViewCell.swift */,
-				949587B82024486C00B85678 /* StarshipInfoViewController.swift */,
-				949587B02023F56B00B85678 /* StarWarsService.swift */,
+				94C0A1A5226980B700D646F5 /* Model */,
+				94C0A1A7226980CA00D646F5 /* Controller */,
+				94C0A1A6226980C400D646F5 /* View */,
+				94C0A1A8226980D300D646F5 /* Networking */,
 				949587862023F55C00B85678 /* Main.storyboard */,
 				949587892023F55C00B85678 /* Assets.xcassets */,
 				9495878B2023F55C00B85678 /* LaunchScreen.storyboard */,
@@ -135,6 +132,38 @@
 				949587A42023F55C00B85678 /* Info.plist */,
 			);
 			path = StarWarsShipViewerUITests;
+			sourceTree = "<group>";
+		};
+		94C0A1A5226980B700D646F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				949587B62023F5A100B85678 /* Starship.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		94C0A1A6226980C400D646F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				949587B22023F58900B85678 /* StarshipTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94C0A1A7226980CA00D646F5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				949587B42023F59800B85678 /* StarshipTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94C0A1A8226980D300D646F5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				949587B02023F56B00B85678 /* StarWarsService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,15 +234,18 @@
 				TargetAttributes = {
 					9495877E2023F55C00B85678 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					949587922023F55C00B85678 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 9495877E2023F55C00B85678;
 					};
 					9495879D2023F55C00B85678 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 9495877E2023F55C00B85678;
 					};
@@ -273,7 +305,6 @@
 			files = (
 				949587B52023F59800B85678 /* StarshipTableViewController.swift in Sources */,
 				949587B12023F56B00B85678 /* StarWarsService.swift in Sources */,
-				949587B92024486C00B85678 /* StarshipInfoViewController.swift in Sources */,
 				949587B72023F5A100B85678 /* Starship.swift in Sources */,
 				949587832023F55C00B85678 /* AppDelegate.swift in Sources */,
 				949587B32023F58900B85678 /* StarshipTableViewCell.swift in Sources */,
@@ -452,7 +483,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanDemo.StarWarsShipViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -467,7 +498,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanDemo.StarWarsShipViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -483,7 +514,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanDemo.StarWarsShipViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StarWarsShipViewer.app/StarWarsShipViewer";
 			};
@@ -500,7 +531,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanDemo.StarWarsShipViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StarWarsShipViewer.app/StarWarsShipViewer";
 			};
@@ -516,7 +547,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanDemo.StarWarsShipViewerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = StarWarsShipViewer;
 			};
@@ -532,7 +563,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanDemo.StarWarsShipViewerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = StarWarsShipViewer;
 			};

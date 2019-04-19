@@ -12,21 +12,10 @@ class StarshipTableViewController: UITableViewController {
     
     let service = StarWarsService()
     var starships = [Starship]()
-    
-    // Some pre-defined examples to use without networking.
-    // Comment out the Starship.init(dict:) method to make it compile.
-    // var starships = [
-    //    Starship(name: "Death Star", model: "Battle Station", manufacturer: "Empire", costInCredits: "1000000000000"),
-    //    Starship(name: "Millennium Falcon", model: "Light freighter", manufacturer: "Solo Corp", costInCredits: "100000")
-    // ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // If not using network
-        // tableView.reloadData()
-        
-        // If using network
+
         reloadStarships()
     }
     
@@ -35,10 +24,7 @@ class StarshipTableViewController: UITableViewController {
     }
 
     func reloadStarships() {
-        // Set this to show the loading indicator in the top left of the status bar
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        service.getStarships { (result) in
+        service.getStarships { result in
             
             // Must call this UI-updating code on the UI thread
             DispatchQueue.main.async {
@@ -50,8 +36,6 @@ class StarshipTableViewController: UITableViewController {
                 case .failure(let error):
                     self.presentAlert(withMessage: error.localizedDescription)
                 }
-                
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
 
         }
@@ -59,7 +43,7 @@ class StarshipTableViewController: UITableViewController {
     
     func presentAlert(withMessage message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             // this code is executed when the alert button is tapped
             print("OK button tapped, message: \(message)")
         }))
@@ -80,10 +64,9 @@ class StarshipTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "starshipCell", for: indexPath) as! StarshipTableViewCell
         
-        let row = indexPath.row
-        let starship = starships[row]
-        
+        let starship = starships[indexPath.row]
         cell.configure(for: starship)
+        
         return cell
     }
     
@@ -106,10 +89,6 @@ class StarshipTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        if segue.identifier == "ShowInfo", let dest = segue.destination as? StarshipInfoViewController, let starship = sender as? Starship {
-            dest.starship = starship
-        }
     }
 
 }
