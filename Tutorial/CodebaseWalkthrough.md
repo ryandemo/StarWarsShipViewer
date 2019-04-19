@@ -1,11 +1,19 @@
 # Starter Codebase Walkthrough
 
-### Introduction
+#### Introduction
 
 The base code provided here is built with the latest Swift and uses best practices for organization. Let's walk through it step by step.
 
+The end goal is to produce an app that shows a list of starships in the Star Wars universe. The main view controller will look like this:
+
+<div style="text-align:center"><img src="static/StarshipTableViewController.png" alt="Simulator Screen Shot" width="300"/></div>
+
+#### Data Source
+We'll be pulling data from the open-source [Star Wars API (SWAPI)](https://swapi.co/). Play around with some of the requests to get a feel for the data we will work with.
+
+#### Architecture
 Here's our basic MVC architecture, with networking:
-![](static/CodebaseWalkthrough.png)
+![](static/MVC Architecture.png)
 Model: `Starship`
 
 View: `StarshipTableViewCell`
@@ -192,7 +200,10 @@ struct StarWarsService {
 ```
 
 ## View
-Each cell in our table view will show some information about a `Starship`. We've connected our custom class `StarshipTableViewCell` to its counterpart in `Main.storyboard` with `@IBOutlet`s, and need to write a function to set up the cell for a `Starship`. I like to call this function `configure`.
+Each cell in our table view will show some information about a `Starship`, like this one for the Death Star:
+<div style="text-align:center"><img src="static/StarshipTableViewCell.png" alt="Simulator Screen Shot" width="300"/></div>
+
+We've connected our custom class `StarshipTableViewCell` to its counterpart in `Main.storyboard` with `@IBOutlet`s, and need to write a function to set up the cell for a `Starship`. I like to call this function `configure`.
 
 ```swift
 class StarshipTableViewCell: UITableViewCell {
@@ -220,7 +231,7 @@ class StarshipTableViewCell: UITableViewCell {
 
 ## Controller
 The table view controller is the class that ties our model, networking and view together. Looking back at our diagram, we see how `StarshipTableViewController` coordinates app functionality:
-![](static/CodebaseWalkthrough.png)
+![](static/MVC Architecture.png)
 
 #### Class Properties
 We need two class-wide properties for our table view controller.
