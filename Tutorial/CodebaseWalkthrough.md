@@ -13,7 +13,7 @@ We'll be pulling data from the open-source [Star Wars API (SWAPI)](https://swapi
 
 #### Architecture
 Here's our basic MVC architecture, with networking:
-![](static/MVC Architecture.png)
+![](static/MVC-Architecture.png)
 Model: `Starship`
 
 View: `StarshipTableViewCell`
@@ -231,7 +231,7 @@ class StarshipTableViewCell: UITableViewCell {
 
 ## Controller
 The table view controller is the class that ties our model, networking and view together. Looking back at our diagram, we see how `StarshipTableViewController` coordinates app functionality:
-![](static/MVC Architecture.png)
+![](static/MVC-Architecture.png)
 
 #### Class Properties
 We need two class-wide properties for our table view controller.
