@@ -22,7 +22,7 @@ When you're done with that, try going through the [Exercises](/Tutorial/Exercise
 - [Ruby](https://www.ruby-lang.org/en/documentation/installation/): `$ brew install ruby`
 - [CocoaPods](https://cocoapods.org/): `$ sudo gem install cocoapods`
 
-##### Learining Materials
+##### Learning Materials
 Here are a few very helpful resources for learning Swift and iOS:
 - Swift [Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html) + [Guided Tour](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html)
 - [Apple Frameworks](https://developer.apple.com/documentation)
