@@ -31,5 +31,6 @@ Here are a few very helpful resources for learning Swift and iOS:
 - [Udemy iOS 12 Course](https://www.udemy.com/course/ios-12-developer-course/)
 
 #### Other Resources
+- [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 - [Icons8: Free Design Resources](https://icons8.com/)
 - [Star Wars API](https://swapi.co/)
