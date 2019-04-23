@@ -41,7 +41,7 @@ We've created this from the JSON response for a starship. You can see the reques
 	"cost_in_credits": "1000000000000",
 }
 ```
-Notice that `cost_in_credits` is in snake case while `costInCredits` in our `Starship` `struct` is in lowerCamelCase. Swift's `Codable` protocol, which `Starship` conforms to, allows for automatic generation of the correct JSON keys when you turn on a specific option. We will cover that in the Networking section.
+Notice that `cost_in_credits` is in snake case while `costInCredits` in our `Starship` `struct` is in lowerCamelCase. Swift's `Codable` protocol, which `Starship` conforms to, allows for automatic generation of the correct JSON keys when you turn on a specific option. We will cover that in the Networking section. However, for more custom initialization in Swift, check out the short writeup on [custom inits](./CustomInit.md).
 
 Swift object types are `struct`s and `class`es. A `struct` is a value type, meaning copies have independent state and the data is thread safe. A `class` has shared, mutable state. `struct`s are more efficient in Swift and get certain functionality for free, like initializers.
 
@@ -71,47 +71,6 @@ A preview of the response when hitting `/api/starships`:
 }
 ```
 So, `Starships` just has one property, `results`, that's an array of `Starship`. We could include other fields like `let count: Int` if we wanted, but that's unnecessary for the tutorial.
-
-#### Custom Inits
-If you need more complex initialization, you can do it in different levels. Custom coding keys can be implemented with an `enum`:
-```swift
-struct Starship: Codable {
-    let name: String
-    let model: String
-    let manufacturer: String
-    let costInCredits: String
-    
-    // You can use this enum if you want more customization in your key names.
-    private enum CodingKeys: String, CodingKey {
-        case costInCredits = "cost_in_credits"
-        case name, model, manufacturer
-    }
-}
-```
-For even more custom inits, you can create an `init` function.
-```swift
-struct Starship: Codable {
-    let name: String
-    let model: String
-    let manufacturer: String
-    let costInCredits: String
-
-    init?(jsonData: Data) {
-        guard let jsonDict = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments),
-            let dict = jsonDict as? [String: Any],
-            let name = dict["name"] as? String,
-            let model = dict["model"] as? String,
-            let manufacturer = dict["manufacturer"] as? String,
-            let costInCredits = dict["cost_in_credits"] as? String else {
-                return nil
-        }
-        self.name = name
-        self.model = model
-        self.manufacturer = manufacturer
-        self.costInCredits = costInCredits
-    }
-}
-```
 
 ## Networking
 Here's where we get to call the API and transform the response into an array of `Starship`. 
@@ -203,7 +162,9 @@ struct StarWarsService {
 Each cell in our table view will show some information about a `Starship`, like this one for the Death Star:
 <div style="text-align:center"><img src="static/StarshipTableViewCell.png" alt="Simulator Screen Shot" width="300"/></div>
 
-We've connected our custom class `StarshipTableViewCell` to its counterpart in `Main.storyboard` with `@IBOutlet`s, and need to write a function to set up the cell for a `Starship`. I like to call this function `configure`.
+It has an image view and two labels stacked together. We've connected these UI elements to the cell class, `StarshipTableViewCell`, using `@IBOutlet`s from the storyboard to the code.
+
+Now, we need to write a function to set up the cell for a `Starship`. I like to call this function `configure`.
 
 ```swift
 class StarshipTableViewCell: UITableViewCell {
