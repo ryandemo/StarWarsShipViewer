@@ -63,11 +63,11 @@ A preview of the response when hitting `/api/starships`:
 			"model": "Executor-class star dreadnought",
 			"manufacturer": "Kuat Drive Yards, Fondor Shipyards",
 			"cost_in_credits": "1143350000",
-    	},
-    	{
-      	    // another starship
-    	}
-    ]
+		},
+		{
+			// another starship
+		}
+	]
 }
 ```
 So, `Starships` just has one property, `results`, that's an array of `Starship`. We could include other fields like `let count: Int` if we wanted, but that's unnecessary for the tutorial.
