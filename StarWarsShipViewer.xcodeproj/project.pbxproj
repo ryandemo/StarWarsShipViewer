@@ -17,6 +17,7 @@
 		949587B32023F58900B85678 /* StarshipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949587B22023F58900B85678 /* StarshipTableViewCell.swift */; };
 		949587B52023F59800B85678 /* StarshipTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949587B42023F59800B85678 /* StarshipTableViewController.swift */; };
 		949587B72023F5A100B85678 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949587B62023F5A100B85678 /* Starship.swift */; };
+		94AE5B3B226ECF5F0010A886 /* StarshipInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AE5B3A226ECF5F0010A886 /* StarshipInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		949587B22023F58900B85678 /* StarshipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipTableViewCell.swift; sourceTree = "<group>"; };
 		949587B42023F59800B85678 /* StarshipTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipTableViewController.swift; sourceTree = "<group>"; };
 		949587B62023F5A100B85678 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		94AE5B3A226ECF5F0010A886 /* StarshipInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				949587B42023F59800B85678 /* StarshipTableViewController.swift */,
+				94AE5B3A226ECF5F0010A886 /* StarshipInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				949587B52023F59800B85678 /* StarshipTableViewController.swift in Sources */,
 				949587B12023F56B00B85678 /* StarWarsService.swift in Sources */,
+				94AE5B3B226ECF5F0010A886 /* StarshipInfoViewController.swift in Sources */,
 				949587B72023F5A100B85678 /* Starship.swift in Sources */,
 				949587832023F55C00B85678 /* AppDelegate.swift in Sources */,
 				949587B32023F58900B85678 /* StarshipTableViewCell.swift in Sources */,

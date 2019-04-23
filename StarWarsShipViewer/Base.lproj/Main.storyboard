@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -93,10 +94,54 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="b1X-z1-xaK" kind="show" identifier="showInfo" id="WGp-vM-Uo0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtK-MX-And" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="580" y="142.57871064467767"/>
+        </scene>
+        <!--Starship Info View Controller-->
+        <scene sceneID="YwF-Ti-KtN">
+            <objects>
+                <viewController id="b1X-z1-xaK" customClass="StarshipInfoViewController" customModule="StarWarsShipViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="45L-pM-gc9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqG-pr-cM3">
+                                <rect key="frame" x="20" y="164" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBF-wD-PLO">
+                                <rect key="frame" x="164.5" y="215" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="updateLabel:" destination="b1X-z1-xaK" eventType="touchUpInside" id="g59-Db-4ns"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RqG-pr-cM3" firstAttribute="top" secondItem="bLi-sY-4BV" secondAttribute="top" constant="100" id="140-un-UNU"/>
+                            <constraint firstItem="gBF-wD-PLO" firstAttribute="top" secondItem="RqG-pr-cM3" secondAttribute="bottom" constant="30" id="7ih-Be-4yZ"/>
+                            <constraint firstItem="RqG-pr-cM3" firstAttribute="centerX" secondItem="45L-pM-gc9" secondAttribute="centerX" id="MgC-MS-5pj"/>
+                            <constraint firstItem="gBF-wD-PLO" firstAttribute="centerX" secondItem="45L-pM-gc9" secondAttribute="centerX" id="crS-XN-THJ"/>
+                            <constraint firstItem="bLi-sY-4BV" firstAttribute="trailing" secondItem="RqG-pr-cM3" secondAttribute="trailing" constant="20" id="hd8-WW-nF6"/>
+                            <constraint firstItem="RqG-pr-cM3" firstAttribute="leading" secondItem="bLi-sY-4BV" secondAttribute="leading" constant="20" id="laT-qO-hjZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bLi-sY-4BV"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="RqG-pr-cM3" id="Hud-OK-aUf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f87-yf-dp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462" y="143"/>
         </scene>
     </scenes>
 </document>

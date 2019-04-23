@@ -67,6 +67,17 @@ class StarshipTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // Deselect right after select to get the "cell was just tapped once" animation
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
+        let starship = starships[indexPath.row]
+        
+        // Sender is an arbitrary object you can send to the segue handler below.
+        self.performSegue(withIdentifier: "showInfo", sender: starship)
+    }
 
 
     // MARK: - Navigation
@@ -75,6 +86,9 @@ class StarshipTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let destination = segue.destination as? StarshipInfoViewController, let starship = sender as? Starship {
+            destination.starship = starship
+        }
     }
 
 }
