@@ -3,13 +3,13 @@ Start at the [Codebase Walkthrough](./CodebaseWalkthrough.md) to understand the 
 
 There's a few simple exercises we'll go through to get you playing with Xcode and storyboards:
 
-1. [Add a View Controller to the Storyboard](add-a-view-controller-to-the-storyboard)
-2. [Create a Segue from the Main View Controller](create-a-segue-from-the-main-view-controller)
-3. [Pass an Object to Your View Controller](Pass an Object to Your View Controller)
-4. [Create a Custom View Controller Class](Create a Custom View Controller Class)
-5. [Connect Your Storyboard to Your Class](Connect Your Storyboard to Your Class)
-6. [Add a Label and Button](Add a Label and Button)
-7. [Load Data from the Passed Model](Load Data from the Passed Model)
+1. [Add a View Controller to the Storyboard](#add-a-view-controller-to-the-storyboard)
+2. [Create a Segue from the Main View Controller](#create-a-segue-from-the-main-view-controller)
+3. [Pass an Object to Your Segue](#pass-an-object-to-your-segue)
+4. [Create a Custom View Controller Class](#create-a-custom-view-controller-class)
+5. [Connect Your Storyboard to Your Class](#connect-your-storyboard-to-your-class)
+6. [Add a Label and Button](#add-a-label-and-button)
+7. [Load Data from a Passed Model](#load-data-from-a-passed-model)
 
 
 ## Overview
